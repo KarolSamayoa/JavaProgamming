@@ -29,7 +29,9 @@ public class Main
         account2.deposit(6000);
 
           //list of many accounts
-        ArrayList<BankAccount> accounts =  new ArrayList( List.of(new BankAccount ("Jake", 10000 ), new BankAccount ("Noah", 45000 ), new BankAccount ("Anne", 23000 ) ) );
+        ArrayList<BankAccount> accounts =  new ArrayList( List.of(new BankAccount ("Jake", 10000 ), 
+                                                                  new BankAccount ("Noah", 45000 ),
+                                                                  new BankAccount ("Anne", 23000 ) ) );
 
          //add account1 and account2
         accounts.add(account1);
