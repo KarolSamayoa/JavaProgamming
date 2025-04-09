@@ -73,8 +73,8 @@ public class MapListOfCars {
 	{
 		//Create list of Car objects
 		List <Car> cars = new ArrayList<>(List.of(new Car(2015, "BMW", 25600),
-												  new Car(2022, "Audi",35750),
-												  new Car(2025, "Honda", 32300)));
+							  new Car(2022, "Audi",35750),
+							  new Car(2025, "Honda", 32300)));
 		cars.add(new Car(2025, "BMW", 55600));
 		cars.add(new Car(2008, "Honda", 8500));
 		cars.add(new Car(2008, "VW", 6500));
@@ -87,7 +87,7 @@ public class MapListOfCars {
 		// Create a TreeMap that groups cars by year using Java Streams
 		//Create map of cars where the key=year and value=list of cars
 		Map <Integer, List<Car>> inventory = new TreeMap<> (cars.stream().
-											collect(Collectors.groupingBy(Car::getYear)));	
+						    collect(Collectors.groupingBy(Car::getYear)));	
 		
 				
 		//printMap(inventory);
@@ -168,7 +168,7 @@ public class MapListOfCars {
 		// Group cars by year and calculate the average price for each year
 	    // TreeMap is used to keep the years sorted in ascending order
 		TreeMap<Integer, Double> result = carList.stream().collect(Collectors.groupingBy(Car::getYear,
-										 TreeMap::new, Collectors.averagingDouble(Car::getPrice)));
+						TreeMap::new, Collectors.averagingDouble(Car::getPrice)));
 		
 		System.out.println("Year\tAverage Price");
 		System.out.println("--------------------");
